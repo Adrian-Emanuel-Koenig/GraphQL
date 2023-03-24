@@ -1,0 +1,43 @@
+{
+  "name": "koenig",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js -p 8080",
+    "dev": "nodemon app.js -p 8080",
+    "testProf": "nodemon --prof app.js",
+    "testPm2": "pm2 start ecosystem.config.cjs",
+    "test": "0x app.js",
+    "testeo": "mocha ./src/test/test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autocannon": "^7.10.0",
+    "bcrypt": "^5.1.0",
+    "compression": "^1.7.4",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "minimist": "^1.2.7",
+    "mongoose": "^6.8.1",
+    "mongoose-findorcreate": "^3.0.0",
+    "nodemailer": "^6.9.1",
+    "normalizr": "^3.6.2",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.5.4",
+    "twilio": "^4.8.0",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.22",
+    "supertest": "^6.3.3"
+  }
+}
