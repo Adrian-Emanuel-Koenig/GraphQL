@@ -15,6 +15,7 @@ const logger = require("./src/logs/logger.js");
 const routerUsuarios = require("./src/Router/usuarios.js");
 const routerProductos = require("./src/Router/productos.js");
 const testProductos = require("./src/Router/productsRouter.js");
+const { graphql } = require("./graphql.js");
 
 const args = minimist(process.argv.slice(2));
 const app = express();
@@ -63,7 +64,7 @@ app.use(passport.session());
 app.use("/", routerUsuarios);
 app.use("/", routerProductos);
 app.use("/", testProductos)
-
+app.use ("/graphql", graphql)
 
 app.set("view engine", "hbs");
 app.set("views", "./src/View/views");
